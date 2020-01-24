@@ -15,7 +15,7 @@ const Dashboard = () => {
 
     const Strikes = () => {
     if (strikes < 2) {
-        return setStrikes(...strikes + 1)
+        return setStrikes(strikes + 1)
     }else {
         return setStrikes(0), setBalls(0)
     }
@@ -23,7 +23,7 @@ const Dashboard = () => {
 
     const Balls = () => {
         if(balls < 3) {
-            return setBalls(...balls + 1)
+            return setBalls(balls + 1)
         }else {
             return setBalls(0), setStrikes(0)
         }
@@ -31,7 +31,7 @@ const Dashboard = () => {
 
     const Fouls = () => {
         if (strikes <= 1){
-            return setStrikes(...strikes + 1)
+            return setStrikes(strikes + 1)
         }else {
             return setStrikes(2)
         }
