@@ -14,24 +14,24 @@ const Dashboard = () => {
 
 
     const Strikes = () => {
-    if (strikes === 0 || strikes === 1) {
-        return setStrikes(strikes + 1)
+    if (strikes < 2) {
+        return setStrikes(...strikes + 1)
     }else {
         return setStrikes(0), setBalls(0)
     }
     }
 
     const Balls = () => {
-        if(balls === 0 || balls === 1 || balls === 2) {
-            return setBalls(balls + 1)
+        if(balls < 3) {
+            return setBalls(...balls + 1)
         }else {
             return setBalls(0), setStrikes(0)
         }
     }
 
     const Fouls = () => {
-        if (strikes === 0 || strikes === 1){
-            return setStrikes(strikes + 1)
+        if (strikes <= 1){
+            return setStrikes(...strikes + 1)
         }else {
             return setStrikes(2)
         }
